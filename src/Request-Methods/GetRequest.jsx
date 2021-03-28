@@ -19,7 +19,9 @@ const GetRequest = () => {
 
   return (
     <>
-      <button onClick={clickHandler}>GET</button>
+      <button type="button" class="btn btn-primary" onClick={clickHandler}>
+        GET
+      </button>
       <ul>{data.title}</ul>
     </>
   );
