@@ -3,7 +3,9 @@ import React from 'react';
 const ErrorHandling = () => {
   return (
     <div>
-      <button>Error Handling</button>
+      <button type="button" class="btn btn-secondary">
+        Error Handling
+      </button>
     </div>
   );
 };

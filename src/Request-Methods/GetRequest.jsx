@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const GetRequest = () => {
+const GetRequest = ({ getData }) => {
   const [data, setData] = useState({});
 
   const clickHandler = (e) => {
@@ -15,14 +15,20 @@ const GetRequest = () => {
         setData(res.data[Math.floor(Math.random() * 100)]);
       })
       .catch((err) => console.log('failed to call API :', err));
+
+    getData = data.title;
   };
 
   return (
     <>
-      <button type="button" class="btn btn-primary" onClick={clickHandler}>
+      <button
+        type="button"
+        class="btn btn-primary"
+        onClick={clickHandler}
+        getData={getData}
+      >
         GET
       </button>
-      <ul>{data.title}</ul>
     </>
   );
 };

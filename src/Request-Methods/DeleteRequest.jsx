@@ -3,7 +3,7 @@ import React from 'react';
 const DeleteRequest = () => {
   return (
     <div>
-      <button type="button" class="btn btn-light">
+      <button type="button" class="btn btn-dark">
         DELETE
       </button>
     </div>
